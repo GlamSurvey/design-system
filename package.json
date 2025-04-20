@@ -49,6 +49,7 @@
     "build:css": "npx tailwindcss -i ./src/styles/tailwind.css -o ./dist/ui.css --minify",
     "build:css:watch": "npx tailwindcss -i ./src/styles/tailwind.css -o ./dist/styles.css --watch",
     "preview:html": "ts-node playground/html/server.ts",
-    "packing": "yarn pack --filename ../glamsurvey-ui.tgz"
+    "packing": "yarn pack --filename ../glamsurvey-ui.tgz",
+    "prepare": "yarn build"
   }
 }
