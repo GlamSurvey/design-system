@@ -1,0 +1,11 @@
+{
+    "compilerOptions": {
+      "baseUrl": ".",
+      "paths": {
+        "@glamui/components/*": ["../../src/components/*"],
+        "@glamui/styles/*": ["../../src/styles/*"]
+      }
+    },
+    "include": ["src"]
+  }
+  
