@@ -1,0 +1,13 @@
+@import 'tailwindcss';
+
+.btn-test {
+  @apply bg-red-500 text-white px-4 py-2 rounded;
+}
+
+.another {
+  @apply bg-amber-800 text-amber-200 p-2.5 rounded-2xl;
+}
+
+.myinit {
+  @apply bg-pink-600 text-pink-300 p-2 rounded;
+}
