@@ -11,3 +11,28 @@
 .myinit {
   @apply bg-pink-600 text-pink-300 p-2 rounded;
 }
+
+/*.logo-base {
+  color-interpolation-filters: sRGB;
+}
+
+.logo-lg-step-start {
+  stop-color: #02abff;
+  stop-opacity: 1;
+}
+
+.logo-lg-step-end {
+  stop-color: #004f78;
+  stop-opacity: 1;
+}
+
+.logo-lg-path-layer2 {
+  display: inline;
+  fill: url(#linearGradient3);
+  stroke: none;
+  stroke-width: 0.600001;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-miterlimit: 20;
+  stroke-opacity: 1;
+}*/

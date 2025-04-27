@@ -8,7 +8,9 @@
   "main": "dist/index.cjs.js",
   "module": "dist/index.es.js",
   "types": "dist/index.d.ts",
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
@@ -29,6 +31,7 @@
   },
   "devDependencies": {
     "@tailwindcss/cli": "^4.1.4",
+    "@tailwindcss/postcss": "^4.1.4",
     "@types/express": "^5.0.1",
     "@types/node": "^22.14.1",
     "@types/react": "^19.1.0",
@@ -36,19 +39,21 @@
     "@vitejs/plugin-react": "^4.4.0",
     "autoprefixer": "^10.4.21",
     "postcss": "^8.5.3",
+    "postcss-cli": "^11.0.1",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
     "tailwindcss": "^4.1.4",
     "ts-node": "^10.9.2",
     "typescript": "^5.8.3",
-    "vite-plugin-dts": "^4.5.3",
-    "react": "^19.1.0",
-    "react-dom": "^19.1.0"
+    "vite-plugin-dts": "^4.5.3"
   },
   "scripts": {
-    "build": "yarn build:css && vite build",
+    "build": "yarn build:css && yarn build:pc && vite build",
     "dev:playground": "yarn --cwd playground/react dev",
     "build:css": "npx tailwindcss -i ./src/styles/tailwind.css -o ./dist/ui.css --minify",
+    "build:pc": "npx postcss ./src/styles/tailwind.css -o ./dist/blt.css --minify",
     "build:css:watch": "npx tailwindcss -i ./src/styles/tailwind.css -o ./dist/styles.css --watch",
-    "preview:html": "ts-node playground/html/server.ts",
+    "preview:html": "yarn build:css && ts-node playground/html/server.ts",
     "packing": "yarn pack --filename ../glamsurvey-ui.tgz",
     "prepare": "yarn build"
   }

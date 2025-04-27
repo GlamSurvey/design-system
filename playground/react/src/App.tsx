@@ -1,18 +1,23 @@
 //import { useState } from 'react';
 import Window from './Window';
+
 import { Button } from '../../../src/components/Buttons/Button';
-import { Logo } from '../../../src/components/Logo/Logo';
+//import { Logo } from '../../../src/components/Logo/Logo';
+import { NavBar } from '../../../src/components/NavBar/NavBar';
 
 function App() {
-  //const [component, setComponent] = useState(() => <Button></Button>);
-
-  //console.log(setComponent(<Button>Ciao</Button>));
+  const links = [{ label: 'Home', href: '/' }];
 
   return (
     <>
+      {/*<Window>
+        <Logo />
+      </Window>*/}
       <Window>
         <Button>Ciao</Button>
-        <Logo></Logo>
+      </Window>
+      <Window>
+        <NavBar links={links} />
       </Window>
     </>
   );
