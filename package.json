@@ -19,6 +19,9 @@
     },
     "./ui.css": {
       "default": "./dist/ui.css"
+    },
+    "./glam.ui.css": {
+      "default": "./dist/built.ui.css"
     }
   },
   "dependencies": {
@@ -48,10 +51,10 @@
     "vite-plugin-dts": "^4.5.3"
   },
   "scripts": {
-    "build": "yarn build:css && yarn build:pc && vite build",
+    "build": "vite build && yarn build:pc ",
     "dev:playground": "yarn --cwd playground/react dev",
     "build:css": "npx tailwindcss -i ./src/styles/tailwind.css -o ./dist/ui.css --minify",
-    "build:pc": "npx postcss ./src/styles/tailwind.css -o ./dist/blt.css --minify",
+    "build:pc": "npx postcss ./src/styles/tailwind.css -o ./dist/glam.ui.css --minify",
     "build:css:watch": "npx tailwindcss -i ./src/styles/tailwind.css -o ./dist/styles.css --watch",
     "preview:html": "yarn build:css && ts-node playground/html/server.ts",
     "packing": "yarn pack --filename ../glamsurvey-ui.tgz",
